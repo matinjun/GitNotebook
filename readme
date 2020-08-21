@@ -1,0 +1,11 @@
+git init : init workspace
+git add : 将文件加入暂存区
+git commit -m "..." : 将文件加入分支
+git reset --hard HEAD^ : 回退到上一个版本，HEAD^^表示上两个版本，以此类推
+git log : commit 日志，每个commit都有一个id
+git reset --hard xxxx : 到指定的版本, xxxx表示commit id
+git reflog : 查看历史命令
+git status : 查看工作区以及暂存区的修改
+git restore <file> ... : 恢复工作区文件
+git restore --staged <file> ... : 撤销暂存区指定文件
+
