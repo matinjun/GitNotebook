@@ -22,7 +22,23 @@ git restore --staged <file> ... : 撤销暂存区指定文件
 注意：以上两个使用ssh协议更加快，http有点慢
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-
-
+分支管理：
+1. git branch : 列出分支
+2. git checkout -b dev : 创建分支dev并且转换到分支dev
+3. git merge dev : 合并分支dev, 加上--no-ff表示普通模式合并，fast forward
+看不出曾经做过合并
+4. 合并无法自动完成时需要解决冲突再提交
+5. git log --graph : 可以看到分支合并图
+6. git stash : 可以保存并隐藏当前工作区
+7. git stash list : 查看保存的区域
+8. git stash apply stash@{xxx} : 表示恢复相应工作区，需要git stash drop来
+删除
+9. git stash pop : 恢复并删除
+10. git cherry-pick [commit-id] : 将bug提交的修改复制到当前分支
+11. git push <远程库> <分支> : 将当前分支修改提交到远程库
+12. git pull <remote> <branch> : 更新本地库
+13. git branch --set-upstream-to=origin/dev dev : 
+出现no tracking information时使用，用于创建链接
+14. ...
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
